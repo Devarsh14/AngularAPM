@@ -20,5 +20,7 @@
 <div>
   <h1>{{ pageTitle}} This is first string interpolation by me or redering by me as user</h1>
 </div>
-<div class="badge-info col-1 col-md-10">dvevarsh </div>
+name
+<div class="badge-info col-1 col-md-10" *ngFor="let user of users">dvevarsh {{ user.name}}</div>
 <router-outlet></router-outlet>
+
