@@ -9,10 +9,10 @@ import { UserInfo } from './user-name/user-info';
 })
 export class AppComponent {
   title = 'APM';
-  pageTitle: string = 'Acme proudct Management';
+  pageTitle = 'Acme proudct Management';
   users: Array<UserInfo>;
-  constructor(private listUserService: ListUserService){
-    this.users=  this.listUserService.ListOfUsers();
+  constructor(private listUserService: ListUserService) {
+    this.users =  this.listUserService.ListOfUsers();
   }
 
 }
