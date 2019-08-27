@@ -22,4 +22,27 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<form [formGroup]="studentForm" (ngSubmit)="onSubmitStudnet()">
+
+    <div  class="form-group">
+        <div class="row">
+          <div class="col-6">
+              <label for="firstname">firstname</label>
+              <input type="text" class="form-control" formControlName="firstName"  id="firstname" aria-describedby="emailHelp" placeholder="Enter firstname">
+
+          </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+    <div class="form-group">
+      <label for="lastname">lastname</label>
+      <input type="text" class="form-control" formControlName="lastName" id="lastname" >
+    </div>
+  </div>
 </div>
+    <button type="submit" class="btn btn-primary" id="namesubmit">Submit</button>
+  </form>
+</div>
+

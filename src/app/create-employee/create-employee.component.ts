@@ -9,6 +9,7 @@ import {FormGroup, FormControl} from '@angular/forms';
 export class CreateEmployeeComponent implements OnInit {
 
    employeeForm: FormGroup;
+   studentForm: FormGroup;
 
   constructor() { }
 
@@ -18,11 +19,20 @@ export class CreateEmployeeComponent implements OnInit {
       email : new FormControl()
 
     });
+
+    this.studentForm = new FormGroup({
+      firstName : new FormControl(),
+      lastName : new FormControl()
+
+    });
   }
 
   onSubmit(): void {
     console.log('Form submitted succesfully');
     console.log(this.employeeForm.value);
   }
-
+  onSubmitStudnet(): void {
+    console.log('studnet logged');
+  }
 }
+
