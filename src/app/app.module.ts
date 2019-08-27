@@ -8,26 +8,23 @@ import { ListUserService } from './list-user.service';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { Routes, RouterModule } from '@angular/router';
+import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-const appRoutes: Routes = [
-  { path: 'crisis-center', component: CrisisListComponent },
-  { path: 'heroes', component: HeroListComponent },
-];
 
 @NgModule({
   declarations: [
     AppComponent,
     UserNameComponent,
     CrisisListComponent,
-    HeroListComponent
+    HeroListComponent,
+    CreateEmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    ReactiveFormsModule
+
   ],
   providers: [ListUserService],
   bootstrap: [AppComponent]
