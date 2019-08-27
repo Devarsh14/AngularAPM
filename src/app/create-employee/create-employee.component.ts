@@ -8,7 +8,7 @@ import {FormGroup, FormControl} from '@angular/forms';
 })
 export class CreateEmployeeComponent implements OnInit {
 
-  public employeeForm: FormGroup;
+   employeeForm: FormGroup;
 
   constructor() { }
 
@@ -18,6 +18,11 @@ export class CreateEmployeeComponent implements OnInit {
       email : new FormControl()
 
     });
+  }
+
+  onSubmit(): void {
+    console.log('Form submitted succesfully');
+    console.log(this.employeeForm.value);
   }
 
 }
